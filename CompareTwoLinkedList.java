@@ -10,16 +10,26 @@
 int CompareLists(Node headA, Node headB) {
     // This is a "method-only" submission. 
     // You only need to complete this method 
-  Node currentA= headA;
-    Node currentB = headB;
-    //Node list = currentA=currentB;
-    while(currentA!=null && currentB!=null)
+    Node currentA =headA;
+    Node currentB =headB;
+    
+        while(currentA!=null && currentB!=null && currentA.data==currentB.data)
     {
-        if(currentA.data==currentB.data)
-        {
+        
             currentA=currentA.next;
             currentB=currentB.next;
-        }
-            }
-    return (currentA==currentB)?1:0;
+        
+    }
+    if(currentA==null && currentB==null)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+    
+    
+   
+    
 }
