@@ -8,17 +8,18 @@
   }
 */
     
-int GetNode(Node head,int n) {
-     // This is a "method-only" submission. 
-     // You only need to complete this method. 
-    Node curr = head;
-    for(int i = 0; i<n;i++){
-        head = head.next;
-    }
-    while(head.next!=null){
-        head=head.next;
-        curr=curr.next;
-    }
-    return curr.data;
+ int GetNode(Node head, int n) {
+        Node current = head;        
+        int count = 0;
 
-}
+        while (head.next != null){
+            head = head.next;
+            if (count < n){
+                count++;
+            }else {
+                current = current.next;
+            }
+        }
+
+        return current.data;
+    }
